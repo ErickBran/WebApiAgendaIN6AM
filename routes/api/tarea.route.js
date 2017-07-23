@@ -32,7 +32,7 @@ router.post('/tarea', services.verificar, function(req, res, next) {
     idUsuario: req.usuario.idUsuario,
     titulo : req.body.titulo,
     descripcion : req.body.descripcion,
-    fechaInicial : req.fechaInicial,
+    fechaInicial : req.body.fechaInicial,
     fechaFinal : req.body.fechaFinal,
     estado : req.body.estado
   };
@@ -52,7 +52,7 @@ router.post('/tarea', services.verificar, function(req, res, next) {
 router.put('/tarea/:idTarea', function(req, res, next){
   var idTarea = req.params.idTarea;
   var data = {
-    titulo : req.body.nombre,
+    titulo : req.body.titulo,
     descripcion : req.body.descripcion,
     fechaInicial : req.body.fechaInicial,
     fechaFinal : req.body.fechaFinal,

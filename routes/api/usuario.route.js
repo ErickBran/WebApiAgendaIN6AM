@@ -34,13 +34,9 @@ router.get('/usuario/historial', function(req, res) {
   });
 });
 
-/*
-SI ALGUIEN ESTA DORMIDO, NO LO DESPIERTEN,
-NOS TOMAMOS UNA FOTICA A LA PAR DE EL
-*/
 router.post('/usuario', function(req, res) {
   var data = {
-    nick : req.body.nick,
+    nombre : req.body.nombre,
     contrasena: req.body.contrasena
   }
   usuario.insert(data, function(resultado) {
